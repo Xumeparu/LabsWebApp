@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    @await Html.PartialAsync("MetatagsPartial")
+    @await Html.PartialAsync("CssPartial")
+</head>
+<body>
+    <div id="page-wrapper">
+        @await Html.PartialAsync("HeaderPartial")
+        <div id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-12-medium">
+                        <div align="left">
+                            <a title="Назад" href="#" onclick="history.back(-1);"><img class="left-arrow" src="~/images/left-arrow.png" alt=""></a>
+                        </div>
+                        @RenderBody()
+                    </div>
+                    @await Html.PartialAsync("SidebarPartial")
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("FooterPartial")
+    </div>
+    @await Html.PartialAsync("ScriptsPartial")
+</body>
+</html>
